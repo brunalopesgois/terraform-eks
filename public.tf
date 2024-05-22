@@ -28,12 +28,12 @@ resource "aws_subnet" "eks_subnet_public_1b" {
   )
 }
 
-resource "aws_route_table_association" "eks_rtb_assoc_1a" {
+resource "aws_route_table_association" "eks_rtb_assoc_pub_1a" {
   subnet_id      = aws_subnet.eks_subnet_public_1a.id
   route_table_id = aws_route_table.eks_rtb_public.id
 }
 
-resource "aws_route_table_association" "eks_rtb_assoc_1b" {
+resource "aws_route_table_association" "eks_rtb_assoc_pub_1b" {
   subnet_id      = aws_subnet.eks_subnet_public_1b.id
   route_table_id = aws_route_table.eks_rtb_public.id
 }
